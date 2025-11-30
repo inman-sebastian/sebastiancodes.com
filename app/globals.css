@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@custom-variant hover-focus {
+  &:hover,
+  &:focus-within {
+    @slot;
   }
 }
 
+@theme inline {
+  --breakpoint-lg: 1160px;
+
+  --font-sans: Inter,-apple-system,BlinkMacSystemFont,Helvetica Neue,Arial,sans-serif;
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 22px;
+  --text-xl: 24px;
+  --text-6xl: 53px;
+  --tracking-wide: 1px;
+  --tracking-widest: 3px;
+
+  --color-*: initial;
+  --color-white: #FFFFFF;
+  --color-carbon: #1A1A1A;
+  --color-nickel: #949495;
+
+  --color-background: light-dark(var(--color-white), var(--color-carbon));
+  --color-heading: light-dark(var(--color-carbon), var(--color-white));
+
+  --color-surface: light-dark(
+    lch(from var(--color-background) calc(l - 5) c h),
+    lch(from var(--color-background) calc(l + 5) c h)
+  );
+
+  --color-foreground: light-dark(
+    lch(from var(--color-surface) calc(l - 50) c h),
+    lch(from var(--color-surface) calc(l + 50) c h)
+  );
+
+  --color-accent: light-dark(
+    var(--color-carbon),
+    var(--color-white)
+  );
+
+  --color-muted: light-dark(
+    lch(from var(--color-foreground) calc(l - 5) c h),
+    lch(from var(--color-foreground) calc(l - 10) c h)
+
+  );
+
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+:where(.dark) {
+  color-scheme: dark !important;
+}
+
+:where(.light) {
+  color-scheme: light !important;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background;
+  @apply text-foreground;
+  @apply transition-colors;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  overflow-x: hidden;
+}
+
+:where(:is(:focus)) {
+  box-shadow: 0 0 0 4px var(--color-background);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+:where(button, a) {
+  cursor: pointer;
+  text-decoration: none;
 }

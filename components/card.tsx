@@ -35,7 +35,7 @@ export default function Card({ type = "common", href, className, children, ...pr
     }
 
     return (
-        <article className={`relative w-full rounded-sm transition-all bg-surface lg:group-hover-focus:opacity-40 lg:hover-focus:opacity-100 lg:hover-focus:scale-[1.1] hover-focus:z-10 ${className}`}>
+        <article className={`relative w-full rounded-sm bg-surface ${href && "transition-all lg:group-hover-focus:bg-surface/25 lg:hover-focus:bg-surface lg:hover-focus:scale-[1.1] hover-focus:z-10"} ${className}`}>
             <Wrapper className="h-full flex flex-col justify-between p-8 lg:p-10 relative z-10 rounded-sm">
                 {type === "project" && "primaryLanguage" in props && props.primaryLanguage && (
                     <div className="flex-1">

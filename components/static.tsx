@@ -218,5 +218,5 @@ export default function Static(props: StaticProps) {
         };
     }, [ref, propEnabled, propNoiseScale, propSeed, propColor, propAlpha, propBurstChance, propScanline, propScanAlpha, propScanSpeed]);
 
-    return <canvas ref={ref} aria-hidden="true" className="fixed inset-0 w-full h-full pointer-events-none z-50" />
+    return <canvas ref={ref} aria-hidden="true" className="fixed inset-0 w-full h-full pointer-events-none z-100" />
 }

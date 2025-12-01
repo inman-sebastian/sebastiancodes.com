@@ -1,6 +1,5 @@
 "use client";
 
-import Icon from "@/components/icon";
 import * as React from "react";
 
 export type ThemeToggleProps = {
@@ -35,25 +34,23 @@ export default function ThemeToggle(props: ThemeToggleProps) {
         }
     }, [theme]);
 
-    if (!mounted) return null;
-
     return (
-        <div className="flex items-center gap-3 lg:gap-2 text-xs uppercase font-bold">
+        <div className="absolute top-0 -translate-y-full lg:pb-6 flex items-center gap-3 text-xs font-bold">
             <button
                 type="button"
                 onClick={() => setTheme("light")}
-                aria-label="Toggle theme"
-                title="Toggle theme"
-                className={`${theme === "light" ? "" : "opacity-50"}`}>
+                aria-label="Use light theme"
+                title="Light theme"
+                className={`uppercase ${theme === "light" ? "text-heading" : "text-foreground/50"}`}>
                 Light
             </button>
-            <span className="tracking-wide opacity-50">//</span>
+            <span aria-hidden="true" className="tracking-wide text-foreground/50">//</span>
             <button
                 type="button"
                 onClick={() => setTheme("dark")}
-                aria-label="Toggle theme"
-                title="Toggle theme"
-                className={`${theme === "dark" ? "" : "opacity-50"}`}>
+                aria-label="Use dark theme"
+                title="Dark theme"
+                className={`uppercase ${theme === "dark" ? "text-heading" : "text-foreground/50"}`}>
                 Dark
             </button>
         </div>

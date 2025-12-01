@@ -32,8 +32,8 @@ export default function Home() {
   return (
     <>
       <Container>
-        <aside className="lg:sticky top-0 lg:h-screen lg:py-16 flex flex-col justify-between lg:max-w-[410px]">
-          <div className="flex flex-col">
+        <aside className="lg:sticky top-0 lg:h-dvh lg:py-22 flex flex-col justify-between lg:max-w-[410px]">
+          <div className="relative flex flex-col">
             {/* <span className="relative overflow-clip inline-flex rounded-full text-sm font-medium">
               <span className="relative z-10 inline-flex items-center py-1 pl-2.5 pr-5">
                 <span className="mr-2 text-base">😜</span>
@@ -42,25 +42,23 @@ export default function Home() {
               <span className="absolute inset-0 bg-sky-500/20 -z-10 animate-pulse" />
             </span> */}
             <ThemeToggle />
-            <div className="order-2 lg:order-1 aspect-3/1 lg:aspect-2/1 w-full rounded-sm overflow-hidden mt-6 flex flex-col">
+            {/* <div className="order-2 lg:order-1 aspect-3/1 lg:aspect-2/1 w-full lg:rounded-sm overflow-hidden mt-6 flex flex-col">
               <div className="flex-1 bg-[#fcb622]" />
               <div className="flex-1 bg-[#ff642c]" />
               <div className="flex-1 bg-[#ed212f]" />
               <div className="flex-1 bg-[#bd2140]" />
               <div className="flex-1 bg-[#692153]" />
-              {/* <img
-                src="/me.jpeg"
-                alt="Sebastian Inman"
-                className="w-full object-cover object-top"
-              /> */}
+            </div> */}
+            <div className="relative overflow-hidden rounded-sm grid aspect-3/2 mt-6 lg:mt-0">
+              <img src="/me.jpeg" alt="Sebastian Inman" className="size-full object-fill saturate-0 dark:contrast-110" />
             </div>
             <div className="order-1 lg:order-2">
               <div className="relative flex flex-col justify-end">
                 {/* <div className="absolute bottom-0 flex flex-col gap-1 justify-end w-full pointer-events-none lg:pb-4.5">
-                  <span className="h-0.5 w-full bg-background" />
-                  <span className="h-0.5 w-full bg-background" />
-                  <span className="h-0.5 w-full bg-background" />
-                  <span className="h-0.5 w-full bg-background" />
+                  <span className="transition-colors h-0.5 w-full bg-background" />
+                  <span className="transition-colors h-0.5 w-full bg-background" />
+                  <span className="transition-colors h-0.5 w-full bg-background" />
+                  <span className="transition-colors h-0.5 w-full bg-background" />
                 </div> */}
                 <h1 className="text-heading text-3xl lg:text-6xl font-bold leading-none mt-6">
                   Sebastian Inman
@@ -120,7 +118,7 @@ export default function Home() {
             </ul>
           </div>
         </aside>
-        <main className="flex-1 lg:min-h-screen flex flex-col lg:py-24 lg:pl-42">
+        <main className="flex-1 flex flex-col lg:pt-22">
           <section
             id="projects"
             aria-labelledby="projects-heading"
@@ -132,7 +130,7 @@ export default function Home() {
             >
               Projects
             </h2>
-            <div className="group grid grid-cols-1 pt-8 pb-10 -my-1 lg:py-0">
+            <div className="group grid grid-cols-1">
               {projects.map((project) => (
                 <Card
                   key={project.href}

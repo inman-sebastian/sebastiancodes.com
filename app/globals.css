@@ -7,30 +7,50 @@
   }
 }
 
+@custom-variant light {
+  .light & {
+    @slot;
+  }
+}
+
+@custom-variant dark {
+  .dark & {
+    @slot;
+  }
+}
+
+@utility text-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  scale: -1;
+}
+
 @theme inline {
   --breakpoint-lg: 1160px;
 
-  --font-sans: Inter,-apple-system,BlinkMacSystemFont,Helvetica Neue,Arial,sans-serif;
+  --font-sans:
+    Inter, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif;
   --text-xs: 11px;
   --text-sm: 13px;
   --text-base: 15px;
-  --text-lg: 22px;
+  --text-lg: 30px;
   --text-xl: 24px;
-  --text-6xl: 53px;
+  --text-6xl: 75px;
   --tracking-wide: 1px;
   --tracking-widest: 3px;
 
   --color-*: initial;
-  --color-white: #FFFFFF;
-  --color-carbon: #1A1A1A;
+  --color-white: #ffffff;
+  --color-porcelain: #FFFDFA;
+  --color-carbon: #1a1a1a;
   --color-nickel: #949495;
 
-  --color-background: light-dark(var(--color-white), var(--color-carbon));
+  --color-background: light-dark(var(--color-porcelain), var(--color-carbon));
   --color-heading: light-dark(var(--color-carbon), var(--color-white));
 
   --color-surface: light-dark(
-    lch(from var(--color-background) calc(l - 5) c h),
-    lch(from var(--color-background) calc(l + 5) c h)
+    lch(from var(--color-background) calc(l - 3.333) c h),
+    lch(from var(--color-background) calc(l + 3.333) c h)
   );
 
   --color-foreground: light-dark(
@@ -38,17 +58,12 @@
     lch(from var(--color-surface) calc(l + 50) c h)
   );
 
-  --color-accent: light-dark(
-    var(--color-carbon),
-    var(--color-white)
-  );
+  --color-accent: light-dark(var(--color-carbon), var(--color-white));
 
   --color-muted: light-dark(
     lch(from var(--color-foreground) calc(l - 5) c h),
     lch(from var(--color-foreground) calc(l - 10) c h)
-
   );
-
 }
 
 :root {
@@ -69,6 +84,16 @@
   color-scheme: light !important;
 }
 
+@font-face {
+  font-family: "Bebas Neue";
+  src:
+    url("/fonts/BebasNeue-Regular.woff2") format("woff2"),
+    url("/fonts/BebasNeue-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   @apply bg-background;
   @apply text-foreground;
@@ -76,6 +101,10 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   overflow-x: hidden;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: "Bebas Neue", var(--font-sans);
 }
 
 :where(:is(:focus)) {
@@ -87,4 +116,9 @@ body {
 :where(button, a) {
   cursor: pointer;
   text-decoration: none;
+}
+
+:where(img) {
+  pointer-events: none;
+  user-select: none;
 }

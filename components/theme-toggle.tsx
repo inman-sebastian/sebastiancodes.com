@@ -35,25 +35,27 @@ export default function ThemeToggle(props: ThemeToggleProps) {
         }
     }, [theme]);
 
-    const toggleTheme = React.useCallback(() => {
-        setTheme(prev => {
-            if (prev === "light") return "dark";
-            if (prev === "dark") return "light";
-            return "light"; // default fallback
-        });
-    }, []);
-
-
     if (!mounted) return null;
 
     return (
-        <button
-            type="button"
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-            title="Toggle theme"
-            className="size-8 flex items-center justify-center rounded-sm bg-surface text-heading transition-colors">
-            <Icon name="theme" />
-        </button>
+        <div className="flex items-center gap-3 lg:gap-2 text-xs uppercase font-bold">
+            <button
+                type="button"
+                onClick={() => setTheme("light")}
+                aria-label="Toggle theme"
+                title="Toggle theme"
+                className={`${theme === "light" ? "" : "opacity-50"}`}>
+                Light
+            </button>
+            <span className="tracking-wide opacity-50">//</span>
+            <button
+                type="button"
+                onClick={() => setTheme("dark")}
+                aria-label="Toggle theme"
+                title="Toggle theme"
+                className={`${theme === "dark" ? "" : "opacity-50"}`}>
+                Dark
+            </button>
+        </div>
     );
 }

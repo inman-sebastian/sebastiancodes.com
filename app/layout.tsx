@@ -16,6 +16,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Sebastian Inman" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
+        <link rel="preload" href="/fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body>
         <Static />

@@ -56,9 +56,12 @@ export const metadata: Metadata = {
         url: "/twitter.jpg",
         width: 1200,
         height: 630,
-        alt: "Sebastian Inman",
-      },
-    ],
+        alt: "Sebastian Inman"
+      }
+    ]
+  },
+  facebook: {
+    appId: "2051859408688772"
   },
   openGraph: {
     siteName: "Sebastian Inman",
@@ -71,10 +74,10 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Sebastian Inman",
-      },
-    ],
-  },
+        alt: "Sebastian Inman"
+      }
+    ]
+  }
 };
 
 export default async function Home() {

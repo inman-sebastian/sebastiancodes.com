@@ -27,6 +27,7 @@ const metaTitle = "Sebastian Inman | Senior Enterprise Web Systems Engineer";
 const metaDescription = "Senior engineer focused on enterprise web architecture, scalable design systems, and TypeScript platforms that bring order to complex products.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.sebastiancodes.com"),
   title: metaTitle,
   description: metaDescription,
   applicationName: "Sebastian Codes",
@@ -93,11 +94,14 @@ export default async function Home() {
           <div className="relative flex flex-col">
             <ThemeToggle />
             <div className="relative overflow-hidden rounded-sm grid aspect-3/2 mt-6 lg:mt-0">
-              <img
+              <video className="size-full object-cover saturate-0 pointer-events-none" autoPlay muted loop playsInline>
+                <source src="/me.mp4" type="video/mp4" />
+              </video>
+              {/* <img
                 src="/me.jpeg"
                 alt="Sebastian Inman"
                 className="size-full object-cover saturate-0 contrast-90 dark:contrast-110"
-              />
+              /> */}
             </div>
             <div className="@container order-1 lg:order-2">
               <div className="relative flex flex-col justify-end">

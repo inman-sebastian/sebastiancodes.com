@@ -61,15 +61,15 @@ export default function Home() {
                   <span className="transition-colors h-0.5 w-full bg-background" />
                   <span className="transition-colors h-0.5 w-full bg-background" />
                 </div> */}
-                <h1 className="text-heading text-[18.333cqw] font-bold leading-none mt-6">
+                <h1 className="text-heading text-[17.075cqw] lg:text-[18.333cqw] font-bold leading-none mt-6">
                   Sebastian Inman
                 </h1>
               </div>
-              <h2 className="text-heading text-[7.44cqw] font-semibold leading-tight">
+              <h2 className="text-heading text-[6.875cqw] lg:text-[7.44cqw] font-semibold leading-tight">
                 Senior Enterprise Web Systems Engineer
               </h2>
             </div>
-            <div className="order-3 mt-6 space-y-4">
+            <div className="order-3 mt-4 space-y-4">
               {/* <p>
                 I'm a senior engineer specializing in enterprise-grade web
                 platforms, design systems, and TypeScript-first architecture.

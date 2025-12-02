@@ -107,6 +107,7 @@ body {
   @apply transition-colors;
   font-family: var(--font-sans);
   font-size: var(--text-base);
+  overscroll-behavior: none;
   overflow-x: hidden;
   position: relative;
   display: flex;

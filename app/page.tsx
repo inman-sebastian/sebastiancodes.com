@@ -4,6 +4,7 @@ import ThemeToggle from "@/components/theme-toggle";
 import Navigation from "@/components/navigation";
 import Card from "@/components/card";
 import Icon from "@/components/icon";
+import GlitchImage from "@/components/glitch-image";
 
 import TomsOffroadLogo from "@/components/logos/toms-offroad";
 import GatorWadersLogo from "@/components/logos/gator-waders";
@@ -50,9 +51,9 @@ export default function Home() {
               <div className="flex-1 bg-[#692153]" />
             </div> */}
             <div className="relative overflow-hidden rounded-sm grid aspect-3/2 mt-6 lg:mt-0">
-              <img src="/me.jpeg" alt="Sebastian Inman" className="size-full object-fill saturate-0 dark:contrast-110" />
+              <img src="/me.jpeg" alt="Sebastian Inman" className="size-full object-cover saturate-0 contrast-[90%] dark:contrast-[110%]" />
             </div>
-            <div className="order-1 lg:order-2">
+            <div className="@container order-1 lg:order-2">
               <div className="relative flex flex-col justify-end">
                 {/* <div className="absolute bottom-0 flex flex-col gap-1 justify-end w-full pointer-events-none lg:pb-4.5">
                   <span className="transition-colors h-0.5 w-full bg-background" />
@@ -60,11 +61,11 @@ export default function Home() {
                   <span className="transition-colors h-0.5 w-full bg-background" />
                   <span className="transition-colors h-0.5 w-full bg-background" />
                 </div> */}
-                <h1 className="text-heading text-3xl lg:text-6xl font-bold leading-none mt-6">
+                <h1 className="text-heading text-[18.333cqw] font-bold leading-none mt-6">
                   Sebastian Inman
                 </h1>
               </div>
-              <h2 className="text-heading text-base lg:text-lg font-semibold leading-tight">
+              <h2 className="text-heading text-[7.44cqw] font-semibold leading-tight">
                 Senior Enterprise Web Systems Engineer
               </h2>
             </div>
@@ -155,7 +156,7 @@ export default function Home() {
             >
               Clients
             </h2>
-            <div className="group grid grid-cols-2 lg:grid-cols-3 gap-2 place-items-center text-heading">
+            <div className="group grid grid-cols-2 lg:grid-cols-3 gap-2 place-items-center text-foreground">
               <Card>
                 <CitiBankLogo className="h-10 lg:h-15" />
               </Card>

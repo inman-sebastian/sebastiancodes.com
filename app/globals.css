@@ -127,6 +127,7 @@ body {
 :where(button, a) {
   cursor: pointer;
   text-decoration: none;
+  text-transform: inherit;
 }
 
 :where(img) {

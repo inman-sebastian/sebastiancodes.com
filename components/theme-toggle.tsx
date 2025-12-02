@@ -35,22 +35,22 @@ export default function ThemeToggle(props: ThemeToggleProps) {
     }, [theme]);
 
     return (
-        <div className="absolute top-0 -translate-y-full lg:pb-6 flex items-center gap-3 text-xs font-bold">
+        <div className="absolute top-0 -translate-y-full lg:pb-6 flex items-center gap-3 text-xs font-bold tracking-wide uppercase">
             <button
                 type="button"
                 onClick={() => setTheme("light")}
                 aria-label="Use light theme"
                 title="Light theme"
-                className={`uppercase ${theme === "light" ? "text-heading" : "text-foreground/50"}`}>
+                className={theme === "light" ? "text-heading" : "text-foreground/50"}>
                 Light
             </button>
-            <span aria-hidden="true" className="tracking-wide text-foreground/50">//</span>
+            <span aria-hidden="true" className="-mt-px text-foreground/50 select-none">//</span>
             <button
                 type="button"
                 onClick={() => setTheme("dark")}
                 aria-label="Use dark theme"
                 title="Dark theme"
-                className={`uppercase ${theme === "dark" ? "text-heading" : "text-foreground/50"}`}>
+                className={theme === "dark" ? "text-heading" : "text-foreground/50"}>
                 Dark
             </button>
         </div>

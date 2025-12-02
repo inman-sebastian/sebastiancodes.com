@@ -23,9 +23,12 @@ import PlannedParenthoodLogo from "@/components/logos/planned-parenthood";
 
 import projects from "@/data/projects";
 
+const metaTitle = "Sebastian Inman | Senior Enterprise Web Systems Engineer";
+const metaDescription = "Senior engineer specializing in enterprise web architecture, design systems, and TypeScript-first platforms. I build scalable monorepos, reusable component libraries, and strong developer experience foundations that help teams ship faster, stay consistent, and manage complex multi-product ecosystems with clarity and confidence.";
+
 export const metadata: Metadata = {
-  title: "Sebastian Inman",
-  description: "Senior Enterprise Web Systems Engineer",
+  title: metaTitle,
+  description: metaDescription,
   applicationName: "Sebastian Codes",
   publisher: "Sebastian Inman",
   keywords: [
@@ -33,6 +36,7 @@ export const metadata: Metadata = {
     "Sebastian",
     "Inman",
     "Web Developer",
+    "Software Developer",
     "Frontend Developer",
     "Full-Stack Developer",
     "Software Engineer",
@@ -49,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sebastian Inman",
-    description: "Senior Enterprise Web Systems Engineer",
+    title: metaTitle,
+    description: metaDescription,
     creator: "@sebastian_codes",
     images: [
       {
@@ -65,9 +69,9 @@ export const metadata: Metadata = {
     appId: "2051859408688772"
   },
   openGraph: {
-    siteName: "Sebastian Inman",
-    title: "Sebastian Inman",
-    description: "Senior Enterprise Web Systems Engineer",
+    siteName: "Sebastian Codes",
+    title: metaTitle,
+    description: metaDescription,
     type: "website",
     url: "https://www.sebastiancodes.com",
     images: [

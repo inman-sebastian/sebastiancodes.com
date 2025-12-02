@@ -24,7 +24,7 @@ import PlannedParenthoodLogo from "@/components/logos/planned-parenthood";
 import projects from "@/data/projects";
 
 const metaTitle = "Sebastian Inman | Senior Enterprise Web Systems Engineer";
-const metaDescription = "Senior engineer specializing in enterprise web architecture, design systems, and TypeScript-first platforms. I build scalable monorepos, reusable component libraries, and strong developer experience foundations that help teams ship faster, stay consistent, and manage complex multi-product ecosystems with clarity and confidence.";
+const metaDescription = "Senior engineer focused on enterprise web architecture, scalable design systems, and TypeScript platforms that bring order to complex products.";
 
 export const metadata: Metadata = {
   title: metaTitle,

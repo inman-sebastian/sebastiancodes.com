@@ -7,6 +7,7 @@ export default function EnergyBrosLogo(
       viewBox="0 0 508.226 255.918"
       {...props}
     >
+      <title>Energy Bros</title>
       <g transform="translate(0.5 0.001)">
         <path
           d="M263.543,143.749h71.874L318.538,255.917,426.894,105.634H355.019L373.532,0Z"

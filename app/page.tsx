@@ -20,6 +20,9 @@ import NICIndustriesLogo from "@/components/logos/nic-industries";
 import ChinookWindsLogo from "@/components/logos/chinook-winds";
 import TangleFreeLogo from "@/components/logos/tanglefree";
 import PlannedParenthoodLogo from "@/components/logos/planned-parenthood";
+import PrismaticPowdersLogo from "@/components/logos/prismatic-powders";
+import CerakoteLogo from "@/components/logos/cerakote";
+import PavatiLogo from "@/components/logos/pavati";
 
 import projects from "@/data/projects";
 
@@ -93,8 +96,8 @@ export default async function Home() {
         <aside className="lg:sticky top-0 lg:h-dvh lg:py-22 flex flex-col justify-between lg:max-w-[410px]">
           <div className="relative flex flex-col">
             <ThemeToggle />
-            <div className="relative overflow-hidden rounded-sm grid aspect-3/2 mt-6 lg:mt-0">
-              <video className="size-full object-cover saturate-0 pointer-events-none" autoPlay muted loop playsInline>
+            <div className="overflow-hidden rounded-sm grid aspect-3/2 mt-6 lg:mt-0">
+              <video className="size-full object-cover saturate-0 contrast-90 pointer-events-none" autoPlay muted loop playsInline>
                 <source src="/me.mp4" type="video/mp4" />
               </video>
               {/* <img
@@ -124,7 +127,7 @@ export default async function Home() {
             <Navigation className="order-4" />
           </div>
           <div className="flex items-center w-full mt-8 lg:mt-[72px]">
-            <ul className="flex -mx-4 text-heading">
+            <ul className="flex flex-col items-start gap-y-4 -mx-4 text-heading">
               <li className="mx-4">
                 <a
                   className="flex items-center"
@@ -133,7 +136,7 @@ export default async function Home() {
                   rel="noopener noreferrer"
                 >
                   <Icon name="linkedin" className="mr-4" />
-                  <span className="mt-px leading-none">LinkedIn</span>
+                  <span className="mt-px leading-none">in/sebastianinman</span>
                   <Icon name="external" className="size-3! ml-2" />
                 </a>
               </li>
@@ -145,7 +148,17 @@ export default async function Home() {
                   rel="noopener noreferrer"
                 >
                   <Icon name="github" className="mr-4" />
-                  <span className="mt-px leading-none">GitHub</span>
+                  <span className="mt-px leading-none">inman-sebastian</span>
+                  <Icon name="external" className="size-3! ml-2" />
+                </a>
+              </li>
+              <li className="mx-4">
+                <a
+                  className="flex items-center"
+                  href="mailto:hello@sebastiancodes.com"
+                >
+                  <Icon name="email" className="mr-4" />
+                  <span className="mt-px leading-none">hello@sebastiancodes.com</span>
                   <Icon name="external" className="size-3! ml-2" />
                 </a>
               </li>
@@ -212,6 +225,12 @@ export default async function Home() {
                 <NICIndustriesLogo className="h-10 lg:h-15" />
               </Card>
               <Card>
+                <PrismaticPowdersLogo className="h-10 lg:h-15" />
+              </Card>
+              <Card>
+                <CerakoteLogo className="h-10 lg:h-15" />
+              </Card>
+              <Card>
                 <TomsOffroadLogo className="h-10 lg:h-15" />
               </Card>
               <Card>
@@ -234,6 +253,9 @@ export default async function Home() {
               </Card>
               <Card>
                 <HighwayProductsLogo className="h-10 lg:h-15" />
+              </Card>
+              <Card>
+                <PavatiLogo className="h-10 lg:h-15" />
               </Card>
             </div>
           </section>

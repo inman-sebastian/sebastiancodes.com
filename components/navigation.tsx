@@ -7,7 +7,7 @@ const navigationLinks = [
     { id: "projects", label: "Projects", href: "#projects" },
     { id: "clients", label: "Clients", href: "#clients" },
     { id: "thoughts", label: "Thoughts", href: "#thoughts" },
-    { id: "playground", label: "Playground", href: "#playground" }
+    { id: "praise", label: "Praise", href: "#praise" }
 ];
 
 export type NavigationProps = {
@@ -41,7 +41,7 @@ export default function Navigation({ className }: NavigationProps) {
     });
 
     return (
-        <nav className={`hidden text-xs font-bold tracking-wide uppercase mt-[72px] lg:block ${className}`} aria-label="Main menu">
+        <nav className={`hidden text-xs font-bold tracking-wide uppercase mt-12 lg:block ${className}`} aria-label="Main menu">
             <ol className="flex flex-row lg:flex-col lg:-my-4">
                 {navigationLinks.map(({ id, label, href }) => (
                     <NavigationLink key={id} id={id} label={label} href={href} />

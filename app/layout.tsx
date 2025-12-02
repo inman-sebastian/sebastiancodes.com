@@ -25,6 +25,12 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Sebastian Inman" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Sebastian Inman | Senior Enterprise Web Systems Engineer" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Senior engineer focused on enterprise web architecture, scalable design systems, and TypeScript platforms that bring order to complex products." />
+        <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="/linkedin.jpg" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://www.sebastiancodes.com" />
+
         <link
           rel="preload"
           href="/fonts/BebasNeue-Regular.woff2"

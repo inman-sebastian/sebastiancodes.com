@@ -67,7 +67,13 @@
 }
 
 :root {
+  accent-color: #fcb622;
   color-scheme: light dark;
+}
+
+::selection {
+  @apply bg-[#fcb622]/50;
+  @apply text-heading;
 }
 
 @media (prefers-reduced-motion: no-preference) {

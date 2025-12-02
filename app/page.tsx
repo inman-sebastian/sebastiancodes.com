@@ -294,7 +294,7 @@ export default async function Home() {
             >
               Praise
             </h2>
-            <div className="grid grid-cols-1 pt-8 pb-10 gap-6 lg:py-0">
+            <div className="grid grid-cols-1 pt-8 pb-10 gap-2 lg:py-0">
               <Card
                 type="testimonial"
                 authorName="Darren Cossette"

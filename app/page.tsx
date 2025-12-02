@@ -51,6 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sebastian Inman",
     description: "Senior Enterprise Web Systems Engineer",
+    creator: "@sebastian_codes",
     images: [
       {
         url: "/twitter.jpg",

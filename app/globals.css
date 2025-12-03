@@ -149,7 +149,7 @@ body {
 
 :where(:is(:focus)) {
   box-shadow: 0 0 0 4px var(--color-background);
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-white);
   outline-offset: 4px;
 }
 
@@ -162,4 +162,12 @@ body {
 :where(img) {
   pointer-events: none;
   user-select: none;
+}
+
+:where(video) {
+  &::-webkit-media-controls-volume-slider,
+  &::-webkit-media-controls-mute-button,
+  &::-webkit-media-controls-fullscreen-button {
+    display: none;
+  }
 }

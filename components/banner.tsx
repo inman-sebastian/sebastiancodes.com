@@ -14,6 +14,7 @@ export default function Banner({ type = "image", desaturate = false, className =
           muted
           loop
           controls
+          controlsList="nodownload nofullscreen noremoteplayback"
           playsInline
           disablePictureInPicture
           disableRemotePlayback

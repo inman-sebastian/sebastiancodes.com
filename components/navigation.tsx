@@ -29,9 +29,9 @@ export default function Navigation({ className }: NavigationProps) {
 
         return (
             <li className="lg:my-4">
-                <a href={href} aria-current={isActive && "page"} aria-label={label} className="group text-muted inline-flex items-center gap-3 transition-colors aria-[current=page]:text-heading">
+                <a href={href} aria-current={isActive && "page"} aria-label={label} className="group text-muted inline-flex items-center gap-3 transition-colors hover-focus:text-heading aria-[current=page]:text-heading">
                     <span aria-hidden="true" className="select-none">{numberLabel}</span>
-                    <span aria-hidden="true" className={`inline-block ${isActive ? "w-[10ch]" : "w-[1.1ch]"} -mt-px select-none transition-all group-hover-focus:w-[10ch] overflow-clip`}>
+                    <span aria-hidden="true" className={`inline-block ${isActive ? "w-[10ch]" : "w-[1.1ch]"} -mt-px select-none transition-all overflow-clip`}>
                         ///////////////////////////////////////////////
                     </span>
                     <span>{label}</span>

@@ -1,28 +1,13 @@
 import type { Metadata } from "next";
 import Container from "@/components/container";
 import ThemeToggle from "@/components/theme-toggle";
+import Banner from "@/components/banner";
 import Navigation from "@/components/navigation";
+import Section from "@/components/section";
 import Card from "@/components/card";
 import Icon from "@/components/icon";
-
-import TomsOffroadLogo from "@/components/logos/toms-offroad";
-import GatorWadersLogo from "@/components/logos/gator-waders";
-import B2BTransportationLogo from "@/components/logos/b2b-transportation";
-import BallisticArmorCoLogo from "@/components/logos/ballistic-armor-co";
-import EnergyBrosLogo from "@/components/logos/energy-bros";
-import JBSteelLogo from "@/components/logos/jb-steel";
-import OregonTruckAutoLogo from "@/components/logos/oregon-truck-auto";
-import CitiBankLogo from "@/components/logos/citi-bank";
-import HighwayProductsLogo from "@/components/logos/highway-products";
-import TIAALogo from "@/components/logos/tiaa";
-import OperationWarmLogo from "@/components/logos/operation-warm";
-import NICIndustriesLogo from "@/components/logos/nic-industries";
-import ChinookWindsLogo from "@/components/logos/chinook-winds";
-import TangleFreeLogo from "@/components/logos/tanglefree";
-import PlannedParenthoodLogo from "@/components/logos/planned-parenthood";
-import PrismaticPowdersLogo from "@/components/logos/prismatic-powders";
-import CerakoteLogo from "@/components/logos/cerakote";
-import PavatiLogo from "@/components/logos/pavati";
+import Grid from "@/components/grid";
+import ClientLogo from "@/components/client-logo";
 
 import projects from "@/data/projects";
 
@@ -95,20 +80,12 @@ export default async function Home() {
       <Container>
         <aside className="lg:sticky top-0 lg:h-dvh lg:py-22 flex flex-col justify-between lg:max-w-[410px]">
           <div className="relative flex flex-col">
-            <ThemeToggle />
-            <div className="overflow-hidden rounded-sm grid aspect-3/2 mt-6 lg:mt-0">
-              <video className="size-full object-cover saturate-0 contrast-90 pointer-events-none" autoPlay muted loop playsInline>
-                <source src="/me.mp4" type="video/mp4" />
-              </video>
-              {/* <img
-                src="/me.jpeg"
-                alt="Sebastian Inman"
-                className="size-full object-cover saturate-0 contrast-90 dark:contrast-110"
-              /> */}
-            </div>
-            <div className="@container order-1 lg:order-2">
+            {/* <ThemeToggle /> */}
+            
+            <Banner type="video" desaturate={true} />
+            <div className="@container order-1 lg:order-2 mb-6 lg:mb-0">
               <div className="relative flex flex-col justify-end">
-                <h1 className="text-heading text-[17.075cqw] lg:text-[18.333cqw] font-bold leading-none mt-6">
+                <h1 className="text-heading text-[17.075cqw] lg:text-[18.333cqw] font-bold leading-none">
                   Sebastian Inman
                 </h1>
               </div>
@@ -116,12 +93,10 @@ export default async function Home() {
                 Senior Enterprise Web Systems Engineer
               </h2>
             </div>
+            
             <div className="order-3 mt-4 space-y-4">
               <p>
-                I help teams move beyond one-off projects and ad-hoc components
-                into coherent systems: shared monorepos, reusable UI libraries,
-                and well-structured foundations that can support multiple
-                products and brands over time.
+                I'm a senior engineer focused on enterprise web architecture, scalable design systems, and TypeScript platforms that bring order to complex products.
               </p>
             </div>
             <Navigation className="order-4" />
@@ -165,19 +140,9 @@ export default async function Home() {
             </ul>
           </div>
         </aside>
-        <main className="flex-1 flex flex-col lg:py-22">
-          <section
-            id="projects"
-            aria-labelledby="projects-heading"
-            className="lg:pt-22 lg:-mt-24"
-          >
-            <h2
-              id="projects-heading"
-              className="sticky top-0 z-40 pt-6 text-sm font-bold tracking-widest uppercase lg:sr-only text-heading"
-            >
-              Projects
-            </h2>
-            <div className="group grid grid-cols-1">
+        <main className="flex-1 flex flex-col lg:py-22 lg:space-y-12">
+          <Section index="1" id="projects">
+            <Grid>
               {projects.map((project) => (
                 <Card
                   key={project.href}
@@ -186,91 +151,73 @@ export default async function Home() {
                   primaryLanguage={project.primaryLanguage}
                   title={project.title}
                   description={project.description}
-                  className="my-1"
                 />
               ))}
-            </div>
-          </section>
-          <section
-            id="clients"
-            aria-labelledby="clients-heading"
-            className="lg:mt-22"
-          >
-            <h2
-              id="clients-heading"
-              className="sticky top-0 z-40 pt-6 text-sm font-bold tracking-widest uppercase lg:sr-only text-heading"
-            >
-              Clients
-            </h2>
-            <div className="group grid grid-cols-2 lg:grid-cols-3 gap-2 place-items-center text-foreground">
+            </Grid>
+          </Section>
+          <Section index="2" id="clients">
+            <Grid className="grid-cols-2 lg:grid-cols-3 gap-2 place-items-center text-foreground">
               <Card>
-                <CitiBankLogo className="h-10 lg:h-15" />
+                <ClientLogo name="citi-bank" />
               </Card>
               <Card>
-                <TIAALogo className="h-10 lg:h-15" />
+                <ClientLogo name="tiaa" />
               </Card>
               <Card>
-                <PlannedParenthoodLogo className="h-10 lg:h-15" />
+                <ClientLogo name="planned-parenthood" />
+              </Card>
+
+              <Card>
+                <ClientLogo name="nic-industries" />
               </Card>
               <Card>
-                <OperationWarmLogo className="h-10 lg:h-15" />
+                <ClientLogo name="prismatic-powders" />
               </Card>
               <Card>
-                <ChinookWindsLogo className="h-10 lg:h-15" />
+                <ClientLogo name="cerakote" />
+              </Card>
+
+              <Card>
+                <ClientLogo name="operation-warm" />
               </Card>
               <Card>
-                <TangleFreeLogo className="h-10 lg:h-15" />
+                <ClientLogo name="chinook-winds" />
               </Card>
               <Card>
-                <NICIndustriesLogo className="h-10 lg:h-15" />
+                <ClientLogo name="tanglefree" />
+              </Card>
+              
+              <Card>
+                <ClientLogo name="toms-offroad" />
               </Card>
               <Card>
-                <PrismaticPowdersLogo className="h-10 lg:h-15" />
+                <ClientLogo name="jb-steel" />
               </Card>
               <Card>
-                <CerakoteLogo className="h-10 lg:h-15" />
+                <ClientLogo name="gator-waders" />
               </Card>
               <Card>
-                <TomsOffroadLogo className="h-10 lg:h-15" />
+                <ClientLogo name="b2b-transportation" />
               </Card>
               <Card>
-                <JBSteelLogo className="h-10 lg:h-15" />
+                <ClientLogo name="ballistic-armor-co" />
               </Card>
               <Card>
-                <GatorWadersLogo className="h-10 lg:h-15" />
+                <ClientLogo name="energy-bros" />
               </Card>
               <Card>
-                <B2BTransportationLogo className="h-10 lg:h-15" />
+                <ClientLogo name="oregon-truck-auto" />
               </Card>
               <Card>
-                <BallisticArmorCoLogo className="h-10 lg:h-15" />
+                <ClientLogo name="highway-products" />
               </Card>
               <Card>
-                <EnergyBrosLogo className="h-10 lg:h-15" />
+                <ClientLogo name="pavati" />
               </Card>
-              <Card>
-                <OregonTruckAutoLogo className="h-10 lg:h-15" />
-              </Card>
-              <Card>
-                <HighwayProductsLogo className="h-10 lg:h-15" />
-              </Card>
-              <Card>
-                <PavatiLogo className="h-10 lg:h-15" />
-              </Card>
-            </div>
-          </section>
-          <section
-            id="thoughts"
-            aria-labelledby="thoughts-heading"
-            className="lg:mt-22"
-          >
-            <h2
-              id="thoughts-heading"
-              className="sticky top-0 z-40 pt-6 text-sm font-bold tracking-widest uppercase lg:sr-only text-heading"
-            >
-              Thoughts
-            </h2>
-            <div className="group grid grid-cols-1 lg:grid-cols-2 pt-8 pb-10 gap-2 lg:py-0">
+            </Grid>
+          </Section>
+          <Section index="3" id="thoughts">
+            <Grid className="lg:grid-cols-2">
               <Card
                 href="/thoughts/thought-1"
                 type="thought"
@@ -311,13 +258,9 @@ export default async function Home() {
                 title="Proident elit consequat cupidatat eiusmod aliqua cillum"
                 className="min-h-80"
               />
-            </div>
-          </section>
-          <section
-            id="praise"
-            aria-labelledby="praise-heading"
-            className="lg:mt-22"
-          >
+            </Grid>
+          </Section>
+          <Section index="4" id="praise">
             <h2
               id="praise-heading"
               className="sticky top-0 z-40 pt-6 text-sm font-bold tracking-widest uppercase lg:sr-only text-heading"
@@ -381,8 +324,8 @@ export default async function Home() {
                 his way through issues related to responsive design.
               </Card>
             </div>
-          </section>
-          <footer className="text-sm mt-22">
+          </Section>
+          <footer className="text-sm">
             Copyright © 2025 Sebastian Inman. All rights reserved.
           </footer>
         </main>

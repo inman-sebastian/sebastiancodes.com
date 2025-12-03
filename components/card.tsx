@@ -66,9 +66,9 @@ export default function Card({
 
   return (
     <article
-      className={`relative w-full rounded-sm bg-surface ${href && "transform-gpu transition-all lg:group-hover-focus:bg-surface/25 lg:hover-focus:bg-surface lg:hover-focus:scale-[1.1] hover-focus:z-10"} ${className}`}
+      className={`relative w-full rounded-sm bg-surface ${href && "transform-gpu transition-all lg:group-hover-focus/grid:opacity-25 lg:hover-focus:opacity-100 lg:hover-focus:scale-[1.1] hover-focus:z-10"} ${className}`}
     >
-      <Wrapper className="h-full flex flex-col justify-between p-8 lg:p-10 relative z-10 rounded-sm">
+      <Wrapper className="group/card h-full flex flex-col justify-between p-8 lg:p-10 relative z-10 rounded-sm">
         {type === "project" ||
           (type === "thought" && (
             <div className="flex-1">
@@ -104,7 +104,7 @@ export default function Card({
           <>
             <Icon name="quote" className="size-10 mb-6 opacity-25" />
             <blockquote className="flex-1 flex flex-col justify-end">
-                <p>{children}</p>
+                <p className="text-md font-handwriting">{children}</p>
                 {"authorName" in props && props.authorName && (
                     <cite className="mt-4 font-semibold text-sm text-heading">- {props.authorName}</cite>
                 )}

@@ -30,9 +30,12 @@
 
   --font-sans:
     Inter, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif;
+  --font-heading: "Bebas Neue", var(--font-sans);
+  --font-handwriting: "Fuzzy Bubbles", var(--font-sans);
   --text-xs: 11px;
   --text-sm: 13px;
-  --text-base: 15px;
+  --text-base: 16px;
+  --text-md: 17px;
   --text-lg: 30px;
   --text-xl: 24px;
   --text-6xl: 75px;
@@ -41,34 +44,22 @@
 
   --color-*: initial;
   --color-white: #ffffff;
-  --color-porcelain: #FFFDFA;
+  --color-porcelain: #fffdfa;
   --color-carbon: #1a1a1a;
   --color-nickel: #949495;
 
-  --color-background: light-dark(var(--color-porcelain), var(--color-carbon));
-  --color-heading: light-dark(var(--color-carbon), var(--color-white));
+  --color-background: var(--color-carbon);
+  --color-heading: var(--color-white);
 
-  --color-surface: light-dark(
-    lch(from var(--color-background) calc(l - 3.333) c h),
-    lch(from var(--color-background) calc(l + 3.333) c h)
-  );
+  --color-surface: lch(from var(--color-background) calc(l + 3.333) c h);
 
-  --color-foreground: light-dark(
-    lch(from var(--color-surface) calc(l - 50) c h),
-    lch(from var(--color-surface) calc(l + 50) c h)
-  );
-
-  --color-accent: light-dark(var(--color-carbon), var(--color-white));
-
-  --color-muted: light-dark(
-    lch(from var(--color-foreground) calc(l - 5) c h),
-    lch(from var(--color-foreground) calc(l - 10) c h)
-  );
+  --color-foreground: lch(from var(--color-surface) calc(l + 50) c h);
+  --color-muted: lch(from var(--color-foreground) calc(l - 5) c h);
 }
 
 :root {
   accent-color: #fcb622;
-  color-scheme: light dark;
+  color-scheme: dark;
 }
 
 ::selection {
@@ -95,6 +86,36 @@
   src:
     url("/fonts/BebasNeue-Regular.woff2") format("woff2"),
     url("/fonts/BebasNeue-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coming Soon";
+  src:
+    url("/fonts/ComingSoon-Regular.woff2") format("woff2"),
+    url("/fonts/ComingSoon-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fuzzy Bubbles";
+  src:
+    url("/fonts/FuzzyBubbles-Bold.woff2") format("woff2"),
+    url("/fonts/FuzzyBubbles-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fuzzy Bubbles";
+  src:
+    url("/fonts/FuzzyBubbles-Regular.woff2") format("woff2"),
+    url("/fonts/FuzzyBubbles-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

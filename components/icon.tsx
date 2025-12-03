@@ -844,8 +844,8 @@ export default function Icon({ name, className }: IconProps) {
                 y2="0.00123034"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#62F755" />
-                <stop offset="1" stop-color="#8FF986" stopOpacity="0" />
+                <stop stopColor="#62F755" />
+                <stop offset="1" stopColor="#8FF986" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_10558_11765"
@@ -856,7 +856,7 @@ export default function Icon({ name, className }: IconProps) {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopOpacity="0.9" />
-                <stop offset="1" stop-color="#1A1A1A" stopOpacity="0" />
+                <stop offset="1" stopColor="#1A1A1A" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
@@ -932,12 +932,12 @@ export default function Icon({ name, className }: IconProps) {
       case "turborepo":
         return (
           <svg
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             viewBox="0 0 16 16"
             style={{ color: "#fff" }}
             {...props}
           >
-            <g clip-path="url(#clip0_872_3188)">
+            <g clipPath="url(#clip0_872_3188)">
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -988,13 +988,13 @@ export default function Icon({ name, className }: IconProps) {
                 <stop offset="0" stopColor="#3a6aff" />
                 <stop offset="1" stopColor="#45a9ff" />
               </linearGradient>
-              <clipPath id="clip-path">
+              <clipPath id="clipPath">
                 <path
                   d="M302.446,646.246,505.3,823.233l617.229-391.5a69.6,69.6,0,0,0,26.642-81.325l-64.617-179.533L302.446,646.246Z"
                   clipRule="evenodd"
                 />
               </clipPath>
-              <clipPath id="clip-path-2">
+              <clipPath id="clipPath-2">
                 <path
                   d="M302.446,646.246,613.567,917.692a65.425,65.425,0,0,0,86.4-.334l305.912-271.112H302.446Z"
                   clipRule="evenodd"
@@ -1019,7 +1019,7 @@ export default function Icon({ name, className }: IconProps) {
                 d="M258.188.987A121.837,121.837,0,0,0,143.7,81.146L10.983,445.663a121.845,121.845,0,0,0,34.7,133.762l536.4,464.825a121.84,121.84,0,0,0,160.625-.912L1263.7,581.4A121.845,121.845,0,0,0,1297.5,448.979L1165.263,81.567A121.839,121.839,0,0,0,1050.625.987H258.187Z"
                 fill="url(#linear-gradient)"
               />
-              <g clip-path="url(#clip-path)">
+              <g clipPath="url(#clipPath)">
                 <image
                   width="851"
                   height="653"
@@ -1032,7 +1032,7 @@ export default function Icon({ name, className }: IconProps) {
                 fill="#fff"
                 fillRule="evenodd"
               />
-              <g clip-path="url(#clip-path-2)">
+              <g clipPath="url(#clipPath-2)">
                 <rect
                   width="703.437"
                   height="287.571"

@@ -97,10 +97,13 @@ export default async function Home() {
               </h2>
             </div>
 
-            <Pill>
-              <span>🟢</span>
-              <span className="text-heading">Available for work</span>
-            </Pill>
+            <dl>
+              <dt className="sr-only">Availability</dt>
+              <Pill>
+                <span>🟢</span>
+                <span className="text-heading">Available for work</span>
+              </Pill>
+            </dl>
             
             <div>
               <p>

@@ -8,9 +8,9 @@ export type PillProps = {
 
 export default function Pill({ icon, className = "", children }: PillProps) {
     return (
-        <span className={`group/pill bg-surface rounded-sm py-3 px-4 inline-flex items-center gap-3 ${className}`}>
+        <dd className={`group/pill bg-surface rounded-sm py-3 px-4 inline-flex items-center gap-3 ${className}`}>
             {icon && <Icon name={icon.name} className={`-ml-0.5 ${icon?.className}`} />}
             <span className="text-xs font-bold tracking-wide leading-none uppercase inline-flex items-center gap-3">{children}</span>
-        </span>
+        </dd>
     )
 }

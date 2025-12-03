@@ -98,7 +98,8 @@ export default async function Home() {
             </div>
 
             <Pill>
-              <span className="text-heading text-shadow-heading/25 animate-text-glow">Available for work</span>
+              <span>🟢</span>
+              <span className="text-heading">Available for work</span>
             </Pill>
             
             <div>
@@ -148,29 +149,50 @@ export default async function Home() {
           </div>
         </aside>
         <main className="flex-1 flex flex-col lg:py-22 lg:space-y-12">
-          <Section index="1" id="skills" title="Skills & Tools">
-            <div className="flex flex-wrap gap-2">
-              <Pill icon={{ name: "typescript" }}>TypeScript</Pill>
-              <Pill icon={{ name: "javascript" }}>JavaScript</Pill>
-              <Pill icon={{ name: "nodejs" }}>Node.js</Pill>
-              <Pill icon={{ name: "react" }}>React</Pill>
+          <Section index="1" id="skills" title="">
+            <dl className="flex flex-wrap gap-2 mb-10">
+              <dt className="w-full font-sans! text-xs font-bold tracking-wide uppercase text-muted mb-4">Frontend Engineering</dt>
               <Pill icon={{ name: "nextjs" }}>Next.js</Pill>
+              <Pill icon={{ name: "typescript" }}>TypeScript</Pill>
+              <Pill icon={{ name: "react" }}>React</Pill>
+              <Pill icon={{ name: "javascript" }}>JavaScript</Pill>
+              <Pill icon={{ name: "html" }}>HTML</Pill>
+              <Pill icon={{ name: "css" }}>CSS</Pill>
               <Pill icon={{ name: "tailwind" }}>Tailwind</Pill>
+              <Pill icon={{ name: "storybook" }}>Storybook</Pill>
+            </dl>
+
+            <dl className="flex flex-wrap gap-2 mb-10">
+              <dt className="w-full font-sans! text-xs font-bold tracking-wide uppercase text-muted mb-4">Backend & Infrastructure</dt>
+              <Pill icon={{ name: "nodejs" }}>Node.js</Pill>
+              <Pill icon={{ name: "bun" }}>Bun</Pill>
+              <Pill icon={{ name: "hono" }}>Hono</Pill>
+              <Pill icon={{ name: "prisma" }}>Prisma</Pill>
               <Pill icon={{ name: "graphql" }}>GraphQL</Pill>
-              <Pill icon={{ name: "figma" }}>Figma</Pill>
+              <Pill icon={{ name: "neon" }}>Neon</Pill>
+              <Pill icon={{ name: "supabase" }}>Supabase</Pill>
+              <Pill icon={{ name: "vercel", className: "size-3.5!" }}>Vercel</Pill>
+            </dl>
+
+            <dl className="flex flex-wrap gap-2 mb-10">
+              <dt className="w-full font-sans! text-xs font-bold tracking-wide uppercase text-muted mb-4">Tools & Workflows</dt>
+              <Pill icon={{ name: "pnpm" }}>pnpm</Pill>
+              <Pill icon={{ name: "turborepo" }}>Turborepo</Pill>
+              <Pill icon={{ name: "git" }}>Git</Pill>
               <Pill icon={{ name: "docker" }}>Docker</Pill>
+              <Pill icon={{ name: "zod" }}>Zod</Pill>
+              <Pill icon={{ name: "figma" }}>Figma</Pill>
               <Pill icon={{ name: "photoshop" }}>Photoshop</Pill>
               <Pill icon={{ name: "illustrator" }}>Illustrator</Pill>
-              <Pill icon={{ name: "vite" }}>Vite</Pill>
-              <Pill icon={{ name: "vue" }}>Vue</Pill>
-              <Pill icon={{ name: "webpack" }}>Webpack</Pill>
-              <Pill icon={{ name: "hono" }}>Hono</Pill>
-              <Pill icon={{ name: "css" }}>CSS</Pill>
-              <Pill icon={{ name: "html" }}>HTML</Pill>
+            </dl>
+
+            <dl className="flex flex-wrap gap-2">
+              <dt className="w-full font-sans! text-xs font-bold tracking-wide uppercase text-muted mb-4">E-Commerce & CMS Platforms</dt>
               <Pill icon={{ name: "wordpress" }}>WordPress</Pill>
+              <Pill icon={{ name: "woocommerce" }}>WooCommerce</Pill>
               <Pill icon={{ name: "shopify" }}>Shopify</Pill>
-              <Pill icon={{ name: "git" }}>Git</Pill>
-            </div>
+              <Pill icon={{ name: "contentful" }}>Contentful</Pill>
+            </dl>
           </Section>
           <Section index="2" id="projects">
             <Grid>

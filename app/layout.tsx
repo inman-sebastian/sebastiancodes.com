@@ -69,7 +69,7 @@ export default function RootLayout({
       </head>
       <body>
         <Static />
-        <div className="sticky top-0 min-h-dvh h-full min-w-20 w-1/6 max-w-64 flex flex-row z-0">
+        <div className="sticky top-0 min-h-lvh h-full min-w-10 w-1/10 lg:w-1/6 max-w-36 flex flex-row z-0">
           <div className="flex-1 bg-[#fcb622]" />
           <div className="flex-1 bg-[#ff642c]" />
           <div className="flex-1 bg-[#ed212f]" />

@@ -1,11 +1,12 @@
 export type BannerProps = {
   type?: "image" | "video";
   desaturate?: boolean;
+  className?: string;
 };
 
-export default function Banner({ type = "image", desaturate = false }: BannerProps) {
+export default function Banner({ type = "image", desaturate = false, className = "" }: BannerProps) {
   return (
-    <div className={`overflow-hidden rounded-sm grid aspect-3/2 order-2 lg:order-1 lg:mb-6 ${desaturate ? "saturate-0" : ""}`}>
+    <div className={`overflow-hidden rounded-sm grid aspect-3/2 ${desaturate ? "saturate-0" : ""} ${className}`}>
       {type === "video" && (
         <video
           className="size-full object-cover contrast-90 pointer-events-none"
@@ -14,7 +15,7 @@ export default function Banner({ type = "image", desaturate = false }: BannerPro
           loop
           playsInline
         >
-          <source src="/me.mp4" type="video/mp4" />
+          <source src="/me_trimmed_loop.mp4" type="video/mp4" />
         </video>
       )}
       {type === "image" && (

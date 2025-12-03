@@ -14,7 +14,7 @@ export default function Section({ index, id, title, className = "", children }: 
 
     return (
         <>
-            <section id={id} aria-labelledby={title ? `${id}-title` : undefined} className="group/section">
+            <section id={id} aria-labelledby={title ? `${id}-title` : undefined} className="group/section scroll-mt-12">
                 <div className="mb-6">
                     <h2 className="font-sans! text-xs font-bold tracking-wide uppercase text-muted flex items-center gap-3">
                         {sectionIndex && (

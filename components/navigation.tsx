@@ -4,6 +4,7 @@ import useSectionObserver from "@/hooks/useSectionObserver";
 import * as React from "react";
 
 const navigationLinks = [
+    { id: "skills", label: "Skills & Tools", href: "#skills" },
     { id: "projects", label: "Projects", href: "#projects" },
     { id: "clients", label: "Clients", href: "#clients" },
     { id: "thoughts", label: "Thoughts", href: "#thoughts" },
@@ -28,7 +29,7 @@ export default function Navigation({ className }: NavigationProps) {
         }, [id, store]);
 
         return (
-            <li className="lg:my-4">
+            <li>
                 <a href={href} aria-current={isActive && "page"} aria-label={label} className="group text-muted inline-flex items-center gap-3 transition-colors hover-focus:text-heading aria-[current=page]:text-heading">
                     <span aria-hidden="true" className="select-none">{numberLabel}</span>
                     <span aria-hidden="true" className={`inline-block ${isActive ? "w-[10ch]" : "w-[1.1ch]"} -mt-px select-none transition-all overflow-clip`}>
@@ -41,8 +42,8 @@ export default function Navigation({ className }: NavigationProps) {
     });
 
     return (
-        <nav className={`hidden text-xs font-bold tracking-wide uppercase mt-12 lg:block ${className}`} aria-label="Main menu">
-            <ol className="flex flex-row lg:flex-col lg:-my-4">
+        <nav className={`hidden text-xs font-bold tracking-wide uppercase mt-6 lg:block ${className}`} aria-label="Main menu">
+            <ol className="flex flex-row lg:flex-col gap-6">
                 {navigationLinks.map(({ id, label, href }) => (
                     <NavigationLink key={id} id={id} label={label} href={href} />
                 ))}

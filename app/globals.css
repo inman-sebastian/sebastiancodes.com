@@ -39,11 +39,12 @@
   --text-lg: 30px;
   --text-xl: 24px;
   --text-6xl: 75px;
+
   --tracking-wide: 1px;
   --tracking-widest: 3px;
 
   --color-*: initial;
-  --color-white: #ffffff;
+  --color-white: #fffdfa;
   --color-porcelain: #fffdfa;
   --color-carbon: #1a1a1a;
   --color-nickel: #949495;
@@ -55,6 +56,8 @@
 
   --color-foreground: lch(from var(--color-surface) calc(l + 50) c h);
   --color-muted: lch(from var(--color-foreground) calc(l - 5) c h);
+
+  --animate-text-glow: text-glow 2s ease-in-out infinite;
 }
 
 :root {
@@ -73,6 +76,21 @@
   }
 }
 
+@keyframes text-glow {
+  0%, 100% {
+    text-shadow:
+      0px 0px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)),
+      0px 0px 4px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)),
+      0px 0px 8px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1));
+  }
+  50% {
+    text-shadow:
+      0px 0px 4px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)),
+      0px 0px 6px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)),
+      0px 0px 12px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1));
+  }
+}
+
 :where(.dark) {
   color-scheme: dark !important;
 }
@@ -86,16 +104,6 @@
   src:
     url("/fonts/BebasNeue-Regular.woff2") format("woff2"),
     url("/fonts/BebasNeue-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Coming Soon";
-  src:
-    url("/fonts/ComingSoon-Regular.woff2") format("woff2"),
-    url("/fonts/ComingSoon-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

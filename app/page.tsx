@@ -8,6 +8,8 @@ import Card from "@/components/card";
 import Icon from "@/components/icon";
 import Grid from "@/components/grid";
 import ClientLogo from "@/components/client-logo";
+import Pill from "@/components/pill";
+import FluidHeading from "@/components/fluid-heading";
 
 import projects from "@/data/projects";
 
@@ -78,28 +80,33 @@ export default async function Home() {
   return (
     <>
       <Container>
-        <aside className="lg:sticky top-0 lg:h-dvh lg:py-22 flex flex-col justify-between lg:max-w-[410px]">
-          <div className="relative flex flex-col">
+        <aside className="lg:sticky top-0 lg:h-dvh lg:py-22 flex flex-col justify-between lg:w-[410px]">
+          <div className="@container relative flex flex-col items-start gap-4">
             {/* <ThemeToggle /> */}
             
-            <Banner type="video" desaturate={true} />
-            <div className="@container order-1 lg:order-2 mb-6 lg:mb-0">
+            <Banner type="video" desaturate={true} className="lg:mb-2" />
+
+            <div>
               <div className="relative flex flex-col justify-end">
-                <h1 className="text-heading text-[17.075cqw] lg:text-[18.333cqw] font-bold leading-none">
+                <FluidHeading as="h1" className="text-heading text-[17.075cqw] lg:text-[18.333cqw] font-bold leading-none">
                   Sebastian Inman
-                </h1>
+                </FluidHeading>
               </div>
-              <h2 className="text-heading text-[6.875cqw] lg:text-[7.44cqw] font-semibold leading-tight">
+              <h2 className="text-heading text-[6.875cqw] lg:text-[7.44cqw] font-semibold leading-none">
                 Senior Enterprise Web Systems Engineer
               </h2>
             </div>
+
+            <Pill>
+              <span className="text-heading text-shadow-heading/25 animate-text-glow">Available for work</span>
+            </Pill>
             
-            <div className="order-3 mt-4 space-y-4">
+            <div>
               <p>
                 I'm a senior engineer focused on enterprise web architecture, scalable design systems, and TypeScript platforms that bring order to complex products.
               </p>
             </div>
-            <Navigation className="order-4" />
+            <Navigation />
           </div>
           <div className="flex items-center w-full mt-8 lg:mt-[72px]">
             <ul className="flex flex-col items-start gap-y-4 -mx-4 text-heading">
@@ -141,7 +148,31 @@ export default async function Home() {
           </div>
         </aside>
         <main className="flex-1 flex flex-col lg:py-22 lg:space-y-12">
-          <Section index="1" id="projects">
+          <Section index="1" id="skills" title="Skills & Tools">
+            <div className="flex flex-wrap gap-2">
+              <Pill icon={{ name: "typescript" }}>TypeScript</Pill>
+              <Pill icon={{ name: "javascript" }}>JavaScript</Pill>
+              <Pill icon={{ name: "nodejs" }}>Node.js</Pill>
+              <Pill icon={{ name: "react" }}>React</Pill>
+              <Pill icon={{ name: "nextjs" }}>Next.js</Pill>
+              <Pill icon={{ name: "tailwind" }}>Tailwind</Pill>
+              <Pill icon={{ name: "graphql" }}>GraphQL</Pill>
+              <Pill icon={{ name: "figma" }}>Figma</Pill>
+              <Pill icon={{ name: "docker" }}>Docker</Pill>
+              <Pill icon={{ name: "photoshop" }}>Photoshop</Pill>
+              <Pill icon={{ name: "illustrator" }}>Illustrator</Pill>
+              <Pill icon={{ name: "vite" }}>Vite</Pill>
+              <Pill icon={{ name: "vue" }}>Vue</Pill>
+              <Pill icon={{ name: "webpack" }}>Webpack</Pill>
+              <Pill icon={{ name: "hono" }}>Hono</Pill>
+              <Pill icon={{ name: "css" }}>CSS</Pill>
+              <Pill icon={{ name: "html" }}>HTML</Pill>
+              <Pill icon={{ name: "wordpress" }}>WordPress</Pill>
+              <Pill icon={{ name: "shopify" }}>Shopify</Pill>
+              <Pill icon={{ name: "git" }}>Git</Pill>
+            </div>
+          </Section>
+          <Section index="2" id="projects">
             <Grid>
               {projects.map((project) => (
                 <Card
@@ -155,7 +186,7 @@ export default async function Home() {
               ))}
             </Grid>
           </Section>
-          <Section index="2" id="clients">
+          <Section index="3" id="clients">
             <Grid className="grid-cols-2 lg:grid-cols-3 gap-2 place-items-center text-foreground">
               <Card>
                 <ClientLogo name="citi-bank" />
@@ -216,7 +247,7 @@ export default async function Home() {
               </Card>
             </Grid>
           </Section>
-          <Section index="3" id="thoughts">
+          <Section index="4" id="thoughts">
             <Grid className="lg:grid-cols-2">
               <Card
                 href="/thoughts/thought-1"
@@ -260,7 +291,7 @@ export default async function Home() {
               />
             </Grid>
           </Section>
-          <Section index="4" id="praise">
+          <Section index="5" id="praise">
             <h2
               id="praise-heading"
               className="sticky top-0 z-40 pt-6 text-sm font-bold tracking-widest uppercase lg:sr-only text-heading"

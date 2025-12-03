@@ -25,11 +25,31 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Sebastian Inman" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
-        <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Sebastian Inman | Senior Enterprise Web Systems Engineer" />
-        <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Senior engineer focused on enterprise web architecture, scalable design systems, and TypeScript platforms that bring order to complex products." />
-        <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
-        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="/linkedin.jpg" />
-        <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://www.sebastiancodes.com" />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:title"
+          content="Sebastian Inman | Senior Enterprise Web Systems Engineer"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:description"
+          content="Senior engineer focused on enterprise web architecture, scalable design systems, and TypeScript platforms that bring order to complex products."
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:type"
+          content="website"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image"
+          content="/linkedin.jpg"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:url"
+          content="https://www.sebastiancodes.com"
+        />
 
         <link
           rel="preload"
@@ -38,19 +58,25 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
+
+        <link
+          rel="preload"
+          href="/fonts/FuzzyBubbles-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <Static />
         <div className="sticky top-0 min-h-dvh h-full min-w-20 w-1/6 max-w-64 flex flex-row z-0">
-            <div className="flex-1 bg-[#fcb622]" />
-            <div className="flex-1 bg-[#ff642c]" />
-            <div className="flex-1 bg-[#ed212f]" />
-            <div className="flex-1 bg-[#bd2140]" />
-            <div className="flex-1 bg-[#692153]" />
-          </div>
-        <div className="flex-1">
-          {children}
+          <div className="flex-1 bg-[#fcb622]" />
+          <div className="flex-1 bg-[#ff642c]" />
+          <div className="flex-1 bg-[#ed212f]" />
+          <div className="flex-1 bg-[#bd2140]" />
+          <div className="flex-1 bg-[#692153]" />
         </div>
+        <div className="flex-1">{children}</div>
       </body>
     </html>
   );

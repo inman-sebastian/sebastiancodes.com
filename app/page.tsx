@@ -10,6 +10,7 @@ import Grid from "@/components/grid";
 import ClientLogo from "@/components/client-logo";
 import Pill from "@/components/pill";
 import FluidHeading from "@/components/fluid-heading";
+import SplitText from "@/components/split-text";
 
 import projects from "@/data/projects";
 
@@ -122,7 +123,7 @@ export default async function Home() {
                   rel="noopener noreferrer"
                 >
                   <Icon name="linkedin" className="mr-4" />
-                  <span className="mt-px leading-none">in/sebastianinman</span>
+                  <SplitText className="mt-px">in/sebastianinman</SplitText>
                   <Icon name="external" className="size-3! ml-2" />
                 </a>
               </li>
@@ -134,7 +135,7 @@ export default async function Home() {
                   rel="noopener noreferrer"
                 >
                   <Icon name="github" className="mr-4" />
-                  <span className="mt-px leading-none">inman-sebastian</span>
+                  <SplitText className="mt-px">inman-sebastian</SplitText>
                   <Icon name="external" className="size-3! ml-2" />
                 </a>
               </li>
@@ -144,7 +145,7 @@ export default async function Home() {
                   href="mailto:hello@sebastiancodes.com"
                 >
                   <Icon name="email" className="mr-4" />
-                  <span className="mt-px leading-none">hello@sebastiancodes.com</span>
+                  <SplitText className="mt-px">hello@sebastiancodes.com</SplitText>
                   <Icon name="external" className="size-3! ml-2" />
                 </a>
               </li>
@@ -156,9 +157,10 @@ export default async function Home() {
             <dl className="flex flex-wrap gap-2 mb-10">
               <dt className="w-full font-sans! text-xs font-bold tracking-wide uppercase text-muted mb-4">Frontend Engineering</dt>
               <Pill icon={{ name: "nextjs" }}>Next.js</Pill>
-              <Pill icon={{ name: "typescript" }}>TypeScript</Pill>
               <Pill icon={{ name: "react" }}>React</Pill>
+              <Pill icon={{ name: "typescript" }}>TypeScript</Pill>
               <Pill icon={{ name: "javascript" }}>JavaScript</Pill>
+              <Pill icon={{ name: "lit" }}>Lit</Pill>
               <Pill icon={{ name: "html" }}>HTML</Pill>
               <Pill icon={{ name: "css" }}>CSS</Pill>
               <Pill icon={{ name: "tailwind" }}>Tailwind</Pill>
@@ -182,6 +184,7 @@ export default async function Home() {
               <Pill icon={{ name: "pnpm" }}>pnpm</Pill>
               <Pill icon={{ name: "turborepo" }}>Turborepo</Pill>
               <Pill icon={{ name: "git" }}>Git</Pill>
+              <Pill icon={{ name: "github", className: "text-white" }}>GitHub Actions</Pill>
               <Pill icon={{ name: "docker" }}>Docker</Pill>
               <Pill icon={{ name: "zod" }}>Zod</Pill>
               <Pill icon={{ name: "figma" }}>Figma</Pill>

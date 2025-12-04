@@ -41,7 +41,8 @@ export type IconProps = {
     | "zod"
     | "vercel"
     | "woocommerce"
-    | "contentful";
+    | "contentful"
+    | "lit";
   className?: string;
 };
 
@@ -1090,6 +1091,12 @@ export default function Icon({ name, className }: IconProps) {
               d="M16.4492 59.4346C16.4492 61.6268 17.3613 63.171 19.2256 65.0352C21.0018 66.8115 22.5539 67.3795 24.4022 67.3795C28.7787 67.3635 32.3151 63.8111 32.2991 59.4346C32.2831 55.0581 28.7307 51.5216 24.3542 51.5377C19.9856 51.5537 16.4572 55.0901 16.4572 59.4586V59.4346H16.4492Z"
               fill="#E44F20"
             />
+          </svg>
+        );
+      case "lit":
+        return (
+          <svg fill="#fff" viewBox="0 0 24 24" {...props}>
+            <path d="m2.4 9.6 4.8 4.8V24l-4.8-4.8V9.6zm4.8-4.8v9.6L12 9.6V0L7.2 4.8zM12 9.6v9.6l4.8-4.8V4.8L12 9.6zm4.8 4.8V24l4.8-4.8V9.6l-4.8 4.8z" />
           </svg>
         );
     }

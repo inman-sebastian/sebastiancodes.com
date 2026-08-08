@@ -1,446 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sebastian Inman — Senior Web Systems Engineer &amp; Accessibility Consultant</title>
-<meta name="description" content="Sebastian Inman is a senior web systems engineer specializing in design systems, TypeScript monorepos, and accessibility engineering, and founder of BetterA11y.">
-<style>
-  :root {
-    --black: #111111;
-    --white: #ffffff;
-    --gray-line: #d9d9d9;
-    --gray-text: #444444;
-    --max-width: 780px;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebastian Inman — Senior Web Systems Engineer &amp; Accessibility Consultant</title>
+  <meta name="description"
+    content="Sebastian Inman is a senior web systems engineer specializing in design systems, TypeScript monorepos, and accessibility engineering, and founder of BetterA11y.">
+  <style>
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --gray-line: #d9d9d9;
+      --gray-text: #444444;
+      --max-width: 780px;
+    }
 
-  * {
-    box-sizing: border-box;
-    text-wrap: pretty;
-  }
+    * {
+      box-sizing: border-box;
+      text-wrap: pretty;
+    }
 
-  html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    * { animation: none !important; transition: none !important; }
-  }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
 
-  body {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: var(--black);
-    background: var(--white);
-    line-height: 1.6;
-    font-size: 18px;
-  }
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
 
-  a {
-    color: var(--black);
-  }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.6;
+      font-size: 18px;
+    }
 
-  a:hover { color: var(--gray-text); }
+    a {
+      color: var(--black);
+    }
 
-  a:focus-visible,
-  button:focus-visible {
-    outline: 3px solid var(--black);
-    outline-offset: 3px;
-  }
+    a:hover {
+      color: var(--gray-text);
+    }
 
-  .skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 0;
-    background: var(--black);
-    color: var(--white);
-    padding: 0.75em 1.25em;
-    z-index: 100;
-    text-decoration: none;
-  }
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--black);
+      outline-offset: 3px;
+    }
 
-  .skip-link:focus {
-    left: 1em;
-    top: 1em;
-  }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--black);
+      color: var(--white);
+      padding: 0.75em 1.25em;
+      z-index: 100;
+      text-decoration: none;
+    }
 
-  header.site-header {
-    border-bottom: 1px solid var(--black);
-    position: sticky;
-    top: 0;
-    background: var(--white);
-    z-index: 10;
-  }
+    .skip-link:focus {
+      left: 1em;
+      top: 1em;
+    }
 
-  .header-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 1em 1.25em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75em;
-  }
+    header.site-header {
+      border-bottom: 1px solid var(--black);
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      z-index: 10;
+    }
 
-  .site-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    letter-spacing: 0.04em;
-    margin: 0;
-  }
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1em 1.25em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75em;
+    }
 
-  .site-title a {
-    text-decoration: none;
-  }
+    .site-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      margin: 0;
+    }
 
-  nav.primary-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25em;
-    margin: 0;
-    padding: 0;
-    font-size: 0.95rem;
-  }
+    .site-title a {
+      text-decoration: none;
+    }
 
-  main { display: block; }
+    nav.primary-nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25em;
+      margin: 0;
+      padding: 0;
+      font-size: 0.95rem;
+    }
 
-  .hero {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 3.5em 1.25em 2.5em;
-  }
+    main {
+      display: block;
+    }
 
-  .hero-inner {
-    display: flex;
-    align-items: center;
-    gap: 2.25em;
-    text-align: left;
-  }
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3.5em 1.25em 2.5em;
+    }
 
-  .hero-photo {
-    width: 168px;
-    height: 168px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    border: 1px solid var(--gray-line);
-  }
-
-  .hero-content {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .hero h1 {
-    font-size: 2.25rem;
-    letter-spacing: 0.03em;
-    margin: 0 0 0.3em;
-    text-transform: uppercase;
-  }
-
-  .hero .tagline {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin: 0 0 0.25em;
-  }
-
-  .hero .tagline-sub {
-    font-size: 1.05rem;
-    color: var(--gray-text);
-    margin: 0 0 1em;
-  }
-
-  .hero .meta-line {
-    font-size: 0.95rem;
-    color: var(--gray-text);
-    margin: 0 0 0.5em;
-  }
-
-  .hero .links-line a {
-    margin: 0 1em 0 0;
-  }
-
-  section {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2.5em 1.25em;
-    border-top: 1px solid var(--gray-line);
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-bottom: 2px solid var(--black);
-    padding-bottom: 0.3em;
-    margin-top: 0;
-  }
-
-  .summary p {
-    font-size: 1.05rem;
-  }
-
-  .competencies-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 2.5em;
-  }
-
-  @media (max-width: 620px) {
-    .competencies-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 2rem; }
     .hero-inner {
-      flex-direction: column;
+      display: flex;
+      align-items: center;
+      gap: 2.25em;
+      text-align: left;
+    }
+
+    .hero-photo {
+      width: 168px;
+      height: 168px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid var(--gray-line);
+      filter: brightness(1.1) contrast(0.9);
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+      letter-spacing: 0.03em;
+      margin: 0 0 0.3em;
+      text-transform: uppercase;
+    }
+
+    .hero .tagline {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin: 0 0 0.25em;
+    }
+
+    .hero .tagline-sub {
+      font-size: 1.05rem;
+      color: var(--gray-text);
+      margin: 0 0 1em;
+    }
+
+    .hero .meta-line {
+      font-size: 0.95rem;
+      color: var(--gray-text);
+      margin: 0 0 0.5em;
+    }
+
+    .hero .links-line a {
+      margin: 0 1em 0 0;
+    }
+
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5em 1.25em;
+      border-top: 1px solid var(--gray-line);
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--black);
+      padding-bottom: 0.3em;
+      margin-top: 0;
+    }
+
+    .summary p {
+      font-size: 1.05rem;
+    }
+
+    .competencies-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 2.5em;
+    }
+
+    @media (max-width: 620px) {
+      .competencies-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero .links-line a {
+        margin: 0 0.5em;
+      }
+    }
+
+    .competencies-grid dt {
+      font-weight: bold;
+      margin-top: 1em;
+    }
+
+    .competencies-grid dt:first-of-type {
+      margin-top: 0;
+    }
+
+    .competencies-grid dd {
+      margin: 0.2em 0 0;
+      color: var(--gray-text);
+    }
+
+    .job {
+      margin-bottom: 2.2em;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.3em 1em;
+    }
+
+    .job-header h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .job-dates {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .job-org {
+      font-style: italic;
+      display: flex;
+      justify-content: space-between;
+      color: var(--gray-text);
+      margin: 0.1em 0 0.6em;
+    }
+
+    .job ul {
+      margin: 0;
+      padding-left: 1.3em;
+    }
+
+    .job li {
+      margin-bottom: 0.4em;
+    }
+
+    .education-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.3em 1em;
+      margin-bottom: 0.6em;
+    }
+
+    footer.site-footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5em 1.25em 3em;
+      border-top: 1px solid var(--gray-line);
       text-align: center;
     }
-    .hero .links-line a {
+
+    footer.site-footer .links-line a {
       margin: 0 0.5em;
     }
-  }
 
-  .competencies-grid dt {
-    font-weight: bold;
-    margin-top: 1em;
-  }
+    footer .fine-print {
+      font-size: 0.85rem;
+      color: var(--gray-text);
+      margin-top: 1.5em;
+    }
 
-  .competencies-grid dt:first-of-type {
-    margin-top: 0;
-  }
+    @media print {
+      header.site-header {
+        position: static;
+      }
 
-  .competencies-grid dd {
-    margin: 0.2em 0 0;
-    color: var(--gray-text);
-  }
-
-  .job {
-    margin-bottom: 2.2em;
-  }
-
-  .job:last-child { margin-bottom: 0; }
-
-  .job-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 0.3em 1em;
-  }
-
-  .job-header h3 {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-
-  .job-dates {
-    font-weight: bold;
-    white-space: nowrap;
-  }
-
-  .job-org {
-    font-style: italic;
-    display: flex;
-    justify-content: space-between;
-    color: var(--gray-text);
-    margin: 0.1em 0 0.6em;
-  }
-
-  .job ul {
-    margin: 0;
-    padding-left: 1.3em;
-  }
-
-  .job li { margin-bottom: 0.4em; }
-
-  .education-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.3em 1em;
-    margin-bottom: 0.6em;
-  }
-
-  footer.site-footer {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2.5em 1.25em 3em;
-    border-top: 1px solid var(--gray-line);
-    text-align: center;
-  }
-
-  footer.site-footer .links-line a {
-    margin: 0 0.5em;
-  }
-
-  footer .fine-print {
-    font-size: 0.85rem;
-    color: var(--gray-text);
-    margin-top: 1.5em;
-  }
-
-  @media print {
-    header.site-header { position: static; }
-    nav.primary-nav { display: none; }
-  }
-</style>
+      nav.primary-nav {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="site-header">
-  <div class="header-inner">
-    <p class="site-title"><a href="#top">Sebastian Inman</a></p>
-    <nav class="primary-nav" aria-label="Primary">
-      <ul>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#competencies">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="site-title"><a href="#top">Sebastian Inman</a></p>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#competencies">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main id="main-content">
+  <main id="main-content">
 
-  <div class="hero" id="top">
-    <div class="hero-inner">
-      <img class="hero-photo" src="headshot.jpg" alt="Portrait of Sebastian Inman" width="168" height="168">
-      <div class="hero-content">
-        <h1>Sebastian Inman</h1>
-        <p class="tagline">Senior Enterprise Web Systems Engineer</p>
-        <p class="tagline-sub">Design Systems, TypeScript Monorepos &amp; Accessibility</p>
-        <p class="meta-line">Talent, OR &nbsp;·&nbsp; Open to Remote, Hybrid &amp; On-site</p>
-        <p class="links-line">
-          <a href="mailto:hello@sebastiancodes.com">hello@sebastiancodes.com</a>
-          <a href="https://www.linkedin.com/in/sebastianinman/">LinkedIn</a>
-          <a href="https://github.com/inman-sebastian">GitHub</a>
-        </p>
+    <div class="hero" id="top">
+      <div class="hero-inner">
+        <img class="hero-photo" src="headshot.jpg" alt="Portrait of Sebastian Inman" width="168" height="168">
+        <div class="hero-content">
+          <h1>Sebastian Inman</h1>
+          <p class="tagline">Senior Enterprise Web Systems Engineer</p>
+          <p class="tagline-sub">Design Systems, TypeScript Monorepos &amp; Accessibility</p>
+          <p class="meta-line">Talent, OR &nbsp;·&nbsp; Open to Remote, Hybrid &amp; On-site</p>
+          <p class="links-line">
+            <a href="mailto:hello@sebastiancodes.com">hello@sebastiancodes.com</a>
+            <a href="https://www.linkedin.com/in/sebastianinman/">LinkedIn</a>
+            <a href="https://github.com/inman-sebastian">GitHub</a>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <section id="summary" aria-labelledby="summary-heading">
-    <h2 id="summary-heading">Professional Summary</h2>
-    <div class="summary">
-      <p>Senior engineer specializing in enterprise web platforms, design systems, and TypeScript-first architecture. Experienced leading monorepo rebuilds, accessible component libraries, and developer tooling for multi-brand, multi-team organizations, and currently applying that same systems-oriented approach to WCAG-based accessibility engineering through an independent practice.</p>
-    </div>
-  </section>
-
-  <section id="experience" aria-labelledby="experience-heading">
-    <h2 id="experience-heading">Experience</h2>
-
-    <article class="job">
-      <div class="job-header">
-        <h3>Founder &amp; Principal Accessibility Consultant</h3>
-        <span class="job-dates">Jan 2026 – Present</span>
+    <section id="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Professional Summary</h2>
+      <div class="summary">
+        <p>Senior engineer specializing in enterprise web platforms, design systems, and TypeScript-first architecture.
+          Experienced leading monorepo rebuilds, accessible component libraries, and developer tooling for multi-brand,
+          multi-team organizations, and currently applying that same systems-oriented approach to WCAG-based
+          accessibility engineering through an independent practice.</p>
       </div>
-      <p class="job-org"><span>BetterA11y</span><span>Talent, OR</span></p>
-      <ul>
-        <li>Developed custom tools and processes for auditing, reporting, and remediating accessibility issues across 8 modules: document and page structure, headings and lists, image alt text, table headers, form fields, contrast and legibility, readability, and scanned documents.</li>
-        <li>Applied WCAG standards and systems-oriented engineering practices to build an independent web and document accessibility auditing and remediation practice.</li>
-      </ul>
-    </article>
+    </section>
 
-    <article class="job">
-      <div class="job-header">
-        <h3>Senior Software Developer</h3>
-        <span class="job-dates">Aug 2024 – Nov 2025</span>
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <article class="job">
+        <div class="job-header">
+          <h3>Founder &amp; Principal Accessibility Consultant</h3>
+          <span class="job-dates">Jan 2026 – Present</span>
+        </div>
+        <p class="job-org"><span>BetterA11y</span><span>Talent, OR</span></p>
+        <ul>
+          <li>Developed custom tools and processes for auditing, reporting, and remediating accessibility issues across
+            8 modules: document and page structure, headings and lists, image alt text, table headers, form fields,
+            contrast and legibility, readability, and scanned documents.</li>
+          <li>Applied WCAG standards and systems-oriented engineering practices to build an independent web and document
+            accessibility auditing and remediation practice.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h3>Senior Software Developer</h3>
+          <span class="job-dates">Aug 2024 – Nov 2025</span>
+        </div>
+        <p class="job-org"><span>NIC Industries, Inc.</span><span>White City, OR</span></p>
+        <ul>
+          <li>Led architectural redesign and modernization of digital properties across three consumer-facing brands
+            (NIC Industries, Prismatic Powders, and Cerakote), owning technical vision and strategy for a company-wide
+            digital rebrand.</li>
+          <li>Architected a fully typed, tree-shakeable monorepo of 10 shared packages supporting all three brands,
+            standardizing UI/UX patterns and shared logic across products.</li>
+          <li>Designed and implemented a unified design system, including accessible React component libraries, style
+            primitives, and theme tokens, backed by reusable TypeScript tooling (schemas, utilities, build systems,
+            deployment pipelines) to standardize development across repositories.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h3>Senior Web Developer</h3>
+          <span class="job-dates">Jul 2021 – Jun 2023</span>
+        </div>
+        <p class="job-org"><span>Juggernaut Marketing and Consulting</span><span>Medford, OR</span></p>
+        <ul>
+          <li>Independently owned the full web design and development lifecycle, as sole developer, for 10+ clients,
+            from discovery through deployment and maintenance, using React, JavaScript, PHP, and Node.js.</li>
+          <li>Delivered accessible, mobile-friendly interfaces, integrated APIs, databases, and third-party services for
+            dynamic content and authentication, and optimized performance by reducing payload sizes and improving
+            caching.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h3>Frontend Web Developer</h3>
+          <span class="job-dates">Jan 2020 – Jul 2021</span>
+        </div>
+        <p class="job-org"><span>NIC Industries, Inc.</span><span>White City, OR</span></p>
+        <ul>
+          <li>Built reusable Vue.js components and data-driven UI patterns for NIC's digital platforms.</li>
+          <li>Improved application performance through code optimization, reduced network calls, and caching, while
+            ensuring cross-browser and cross-device consistency aligned with brand design systems.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h3>Senior Full Stack Developer</h3>
+          <span class="job-dates">Jan 2013 – Jan 2020</span>
+        </div>
+        <p class="job-org"><span>Highway Products Inc.</span><span>White City, OR</span></p>
+        <ul>
+          <li>Independently owned web development, as sole developer, for parent company Highway Products and two
+            subsidiaries, Pavati Marine and Pavati Wake, from UI design to backend systems and internal tooling.</li>
+          <li>Built custom PHP backend systems and MySQL databases supporting e-commerce, orders, and internal
+            workflows, and designed UX/UI for digital initiatives in collaboration with marketing on campaigns and
+            analytics-driven improvements.</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <section id="competencies" aria-labelledby="competencies-heading">
+      <h2 id="competencies-heading">Core Competencies</h2>
+      <div class="competencies-grid">
+        <dl>
+          <dt>Languages &amp; Frameworks</dt>
+          <dd>TypeScript, JavaScript, React, Vue.js, Node.js, PHP</dd>
+          <dt>Architecture &amp; Systems</dt>
+          <dd>Design Systems, Component Libraries, Monorepo Architecture</dd>
+          <dt>Accessibility &amp; Performance</dt>
+          <dd>WCAG Auditing &amp; Remediation, Document Accessibility, Performance Optimization</dd>
+        </dl>
+        <dl>
+          <dt>Web Fundamentals</dt>
+          <dd>HTML5, CSS3, Sass</dd>
+          <dt>Data &amp; Integration</dt>
+          <dd>MySQL, REST API Integration</dd>
+          <dt>Tooling &amp; DevOps</dt>
+          <dd>Docker, CI/CD &amp; Build Pipelines, Adobe Illustrator, Adobe Photoshop</dd>
+        </dl>
       </div>
-      <p class="job-org"><span>NIC Industries, Inc.</span><span>White City, OR</span></p>
-      <ul>
-        <li>Led architectural redesign and modernization of digital properties across three consumer-facing brands (NIC Industries, Prismatic Powders, and Cerakote), owning technical vision and strategy for a company-wide digital rebrand.</li>
-        <li>Architected a fully typed, tree-shakeable monorepo of 10 shared packages supporting all three brands, standardizing UI/UX patterns and shared logic across products.</li>
-        <li>Designed and implemented a unified design system, including accessible React component libraries, style primitives, and theme tokens, backed by reusable TypeScript tooling (schemas, utilities, build systems, deployment pipelines) to standardize development across repositories.</li>
-      </ul>
-    </article>
+    </section>
 
-    <article class="job">
-      <div class="job-header">
-        <h3>Senior Web Developer</h3>
-        <span class="job-dates">Jul 2021 – Jun 2023</span>
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <div class="education-item">
+        <span>Associate's Degree, Graphic Design, Coleman University</span>
+        <span>2010 – 2012</span>
       </div>
-      <p class="job-org"><span>Juggernaut Marketing and Consulting</span><span>Medford, OR</span></p>
-      <ul>
-        <li>Independently owned the full web design and development lifecycle, as sole developer, for 10+ clients, from discovery through deployment and maintenance, using React, JavaScript, PHP, and Node.js.</li>
-        <li>Delivered accessible, mobile-friendly interfaces, integrated APIs, databases, and third-party services for dynamic content and authentication, and optimized performance by reducing payload sizes and improving caching.</li>
-      </ul>
-    </article>
-
-    <article class="job">
-      <div class="job-header">
-        <h3>Frontend Web Developer</h3>
-        <span class="job-dates">Jan 2020 – Jul 2021</span>
+      <div class="education-item">
+        <span>Certificate, Web Design &amp; Development, An Event Apart</span>
+        <span>2013</span>
       </div>
-      <p class="job-org"><span>NIC Industries, Inc.</span><span>White City, OR</span></p>
-      <ul>
-        <li>Built reusable Vue.js components and data-driven UI patterns for NIC's digital platforms.</li>
-        <li>Improved application performance through code optimization, reduced network calls, and caching, while ensuring cross-browser and cross-device consistency aligned with brand design systems.</li>
-      </ul>
-    </article>
+    </section>
 
-    <article class="job">
-      <div class="job-header">
-        <h3>Senior Full Stack Developer</h3>
-        <span class="job-dates">Jan 2013 – Jan 2020</span>
-      </div>
-      <p class="job-org"><span>Highway Products Inc.</span><span>White City, OR</span></p>
-      <ul>
-        <li>Independently owned web development, as sole developer, for parent company Highway Products and two subsidiaries, Pavati Marine and Pavati Wake, from UI design to backend systems and internal tooling.</li>
-        <li>Built custom PHP backend systems and MySQL databases supporting e-commerce, orders, and internal workflows, and designed UX/UI for digital initiatives in collaboration with marketing on campaigns and analytics-driven improvements.</li>
-      </ul>
-    </article>
+  </main>
 
-  </section>
-
-  <section id="competencies" aria-labelledby="competencies-heading">
-    <h2 id="competencies-heading">Core Competencies</h2>
-    <div class="competencies-grid">
-      <dl>
-        <dt>Languages &amp; Frameworks</dt>
-        <dd>TypeScript, JavaScript, React, Vue.js, Node.js, PHP</dd>
-        <dt>Architecture &amp; Systems</dt>
-        <dd>Design Systems, Component Libraries, Monorepo Architecture</dd>
-        <dt>Accessibility &amp; Performance</dt>
-        <dd>WCAG Auditing &amp; Remediation, Document Accessibility, Performance Optimization</dd>
-      </dl>
-      <dl>
-        <dt>Web Fundamentals</dt>
-        <dd>HTML5, CSS3, Sass</dd>
-        <dt>Data &amp; Integration</dt>
-        <dd>MySQL, REST API Integration</dd>
-        <dt>Tooling &amp; DevOps</dt>
-        <dd>Docker, CI/CD &amp; Build Pipelines, Adobe Illustrator, Adobe Photoshop</dd>
-      </dl>
-    </div>
-  </section>
-
-  <section id="education" aria-labelledby="education-heading">
-    <h2 id="education-heading">Education</h2>
-    <div class="education-item">
-      <span>Associate's Degree, Graphic Design, Coleman University</span>
-      <span>2010 – 2012</span>
-    </div>
-    <div class="education-item">
-      <span>Certificate, Web Design &amp; Development, An Event Apart</span>
-      <span>2013</span>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer" id="contact" aria-labelledby="contact-heading">
-  <h2 id="contact-heading">Contact</h2>
-  <p>Open to remote, hybrid, and on-site senior engineering roles.</p>
-  <p class="links-line">
-    <a href="mailto:hello@sebastiancodes.com">hello@sebastiancodes.com</a>
-    <a href="https://www.linkedin.com/in/sebastianinman/">LinkedIn</a>
-    <a href="https://github.com/inman-sebastian">GitHub</a>
-  </p>
-  <p class="fine-print">&copy; 2026 Sebastian Inman. Built with semantic, accessible HTML.</p>
-</footer>
+  <footer class="site-footer" id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact</h2>
+    <p>Open to remote, hybrid, and on-site senior engineering roles.</p>
+    <p class="links-line">
+      <a href="mailto:hello@sebastiancodes.com">hello@sebastiancodes.com</a>
+      <a href="https://www.linkedin.com/in/sebastianinman/">LinkedIn</a>
+      <a href="https://github.com/inman-sebastian">GitHub</a>
+    </p>
+    <p class="fine-print">&copy; 2026 Sebastian Inman. Built with semantic, accessible HTML.</p>
+  </footer>
 
 </body>
+
 </html>

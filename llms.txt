@@ -1,0 +1,42 @@
+# Sebastian Inman
+
+> Senior Enterprise Web Systems Engineer specializing in design systems, TypeScript monorepos, and accessibility engineering. Founder of BetterA11y, an independent WCAG-based web and document accessibility auditing and remediation practice.
+
+Sebastian is a senior software engineer based in Talent, Oregon, open to remote, hybrid, and on-site roles. His background spans enterprise frontend architecture, design systems, component libraries, and TypeScript-first tooling for multi-brand organizations.
+
+## Site
+
+- [Homepage](https://sebastiancodes.com/): Full profile, including professional summary, experience, core competencies, and education.
+- [Professional Summary](https://sebastiancodes.com/#summary)
+- [Experience](https://sebastiancodes.com/#experience)
+- [Core Competencies](https://sebastiancodes.com/#competencies)
+- [Education](https://sebastiancodes.com/#education)
+- [Contact](https://sebastiancodes.com/#contact)
+
+## Contact
+
+- Email: hello@sebastiancodes.com
+- LinkedIn: https://www.linkedin.com/in/sebastianinman/
+- GitHub: https://github.com/inman-sebastian
+
+## Experience
+
+- Founder & Principal Accessibility Consultant, BetterA11y, Talent, OR (Jan 2026 – Present): Developed custom tools and processes for auditing, reporting, and remediating accessibility issues across 8 modules (document and page structure, headings and lists, image alt text, table headers, form fields, contrast and legibility, readability, and scanned documents).
+- Senior Software Developer, NIC Industries, Inc., White City, OR (Aug 2024 – Nov 2025): Led architectural redesign and modernization of digital properties across three consumer-facing brands (NIC Industries, Prismatic Powders, and Cerakote), including a fully typed monorepo of 10 shared packages and a unified design system with accessible React component libraries.
+- Senior Web Developer, Juggernaut Marketing and Consulting, Medford, OR (Jul 2021 – Jun 2023): Independently owned the full web design and development lifecycle, as sole developer, for 10+ clients, using React, JavaScript, PHP, and Node.js.
+- Frontend Web Developer, NIC Industries, Inc., White City, OR (Jan 2020 – Jul 2021): Built reusable Vue.js components and data-driven UI patterns.
+- Senior Full Stack Developer, Highway Products Inc., White City, OR (Jan 2013 – Jan 2020): Independently owned web development, as sole developer, for Highway Products and two subsidiaries, Pavati Marine and Pavati Wake.
+
+## Core Competencies
+
+- Languages & Frameworks: TypeScript, JavaScript, React, Vue.js, Node.js, PHP
+- Architecture & Systems: Design Systems, Component Libraries, Monorepo Architecture
+- Accessibility & Performance: WCAG Auditing & Remediation, Document Accessibility, Performance Optimization
+- Web Fundamentals: HTML5, CSS3, Sass
+- Data & Integration: MySQL, REST API Integration
+- Tooling & DevOps: Docker, CI/CD & Build Pipelines, Adobe Illustrator, Adobe Photoshop
+
+## Education
+
+- Associate's Degree, Graphic Design, Coleman University (2010 – 2012)
+- Certificate, Web Design & Development, An Event Apart (2013)
